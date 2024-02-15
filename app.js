@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-app.get("/generate", (req, res) => {
+app.get("/data", (req, res) => {
   const {
     region = "USA",
     errorsPerRecord = 0,
@@ -58,6 +58,4 @@ app.get("/generate", (req, res) => {
   res.status(200).json(userData);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port http://localhost:${port}`);
-});
+app.listen(port);
