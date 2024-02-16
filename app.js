@@ -19,7 +19,7 @@ app.get("/data", (req, res) => {
     errorsPerRecord = 0,
     seed = 0,
     pageNumber = 1,
-    pageSize = 20,
+    pageSize = 10,
   } = req.query;
 
   const faker = getLocalFaker(region);
@@ -64,9 +64,11 @@ app.get("/export", (req, res) => {
     region = "USA",
     errorsPerRecord = 0,
     seed = 0,
-    pageNumber = 1,
-    pageSize = 20,
+    // pageNumber = 1,
+    pageSize = 10,
   } = req.query;
+
+  const pageNumber = 1;
 
   const faker = getLocalFaker(region);
   faker.seed(parseInt(seed) + (parseInt(pageNumber) - 1) * parseInt(pageSize));
