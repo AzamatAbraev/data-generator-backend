@@ -64,7 +64,6 @@ app.get("/export", (req, res) => {
     region = "USA",
     errorsPerRecord = 0,
     seed = 0,
-    // pageNumber = 1,
     pageSize = 10,
   } = req.query;
 
