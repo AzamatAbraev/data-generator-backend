@@ -2,6 +2,7 @@ const { faker } = require("@faker-js/faker");
 
 const generateErrors = (text, errorsCount, maxIncreasePercent = 20) => {
   let modifiedText = text;
+  
   const originalLength = text.length;
   const minLength = 3;
   const maxLength =
